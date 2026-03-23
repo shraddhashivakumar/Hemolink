@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hemolink Donor Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<section class="form-section">
+  <div class="form-container">
+    <h2>Available Blood Donors</h2>
+
+    <label>Filter by Blood Type</label>
+    <select id="filterBlood">
+      <option value="">All</option>
+      <option>A+</option>
+      <option>A-</option>
+      <option>B+</option>
+      <option>B-</option>
+      <option>O+</option>
+      <option>O-</option>
+      <option>AB+</option>
+      <option>AB-</option>
+    </select>
+
+    <div id="publicMap" class="map-box"></div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+const map = L.map('publicMap').setView([20.5937, 78.9629], 5);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+let markers = [];
+
+// Fetch donors
+async function loadDonors(bloodType = "") {
+  markers.forEach(marker => map.removeLayer(marker));
+  markers = [];
+
+  let url = "http://localhost:5000/api/donors";
+  if (bloodType) {
+    url += `?blood_type=${bloodType}`;
+  }
+
+  const response = await fetch(url);
+  const donors = await response.json();
+
+  donors.forEach(donor => {
+    if (donor.latitude && donor.longitude) {
+      const marker = L.marker([donor.latitude, donor.longitude])
+        .addTo(map)
+        .bindPopup(`
+          <b>${donor.full_name}</b><br>
+          Blood: ${donor.blood_type}<br>
+          Phone: ${donor.phone}
+        `);
+
+      markers.push(marker);
+    }
+  });
+}
+
+// Initial load
+loadDonors();
+
+// Filter change
+document.getElementById("filterBlood").addEventListener("change", function() {
+  loadDonors(this.value);
+});
+</script>
+
+</body>
+</html>

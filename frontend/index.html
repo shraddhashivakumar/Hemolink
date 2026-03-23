@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hemolink - Connecting Lives in Seconds</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://res.cloudinary.com/dilgazr2g/image/upload/v1771236520/logo_c48mki.jpg" alt="Hemolink Logo">
+      <span>Hemolink</span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#how">About Us</a>
+      <a href="register.html">Register</a>
+      <a href="faq.html">FAQ</a>
+      <a href="hospitals.html">Registered Hospitals</a>
+    </nav>
+
+    <!-- Hamburger (Mobile Only) -->
+    <div class="hamburger" id="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Desktop Button -->
+    <button class="btn-outline desktop-btn" onclick="location.href='request.html'">
+      Request Blood
+    </button>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="section hidden hero">
+    <div class="hero-left">
+      <h1>
+        Connecting<br>
+        Lives In<br>
+        Seconds.
+      </h1>
+
+      <p>
+        Bridging blood seekers and nearby donors instantly through
+        precision mapping and rapid notification networks.
+      </p>
+
+      <button class="btn-primary" onclick="location.href='request.html'">
+        Request Donation
+      </button>
+    </div>
+
+    <div class="hero-right">
+      <img src="assets/hero.jpeg" alt="Blood World Map" />
+    </div>
+  </section>
+
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="section hidden how" id="how">
+    <h2>How the life-saving network operates.</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Request Blood Type</h3>
+        <br>
+        <p>
+          Determine the specific blood type needed. Hemolink identifies
+          suitable donors within a precise 1 km radius based on real-time location data.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Instant Alerts</h3>
+        <br>
+        <p>
+          Donors receive immediate alerts via SMS or email.
+          The system allows them to instantly accept or decline the request
+          based on their current availability.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Track & Save</h3>
+        <br>
+        <p>
+          Real-time donor feedback flows back to seekers,
+          and the system tracks donation coordinates to streamline the
+          life-saving process efficiently.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ================= TECHNOLOGY SECTION ================= -->
+<section class="section hidden tech">
+
+  <div class="tech-left">
+    <img src="https://res.cloudinary.com/dilgazr2g/image/upload/v1771235592/blood_donors_pxagsl.jpg" 
+         alt="Blood donors network">
+  </div>
+
+  <div class="tech-right">
+    <h2>The Technology of Life-Saving Connection</h2>
+
+    <div class="tech-item">
+      <h3>Real-Time Precision Alerts</h3>
+      <p>
+        Donors receive immediate notifications via SMS or email when a seeker within range
+        requires a matching blood type, ensuring rapid response in critical moments.
+      </p>
+    </div>
+
+    <div class="tech-item">
+      <h3>Proximity-Based Matching</h3>
+      <p>
+        Our intelligent mapping system identifies suitable donors within a 1 km radius
+        of the seeker, bridging the gap between need and help with geometric accuracy.
+      </p>
+    </div>
+
+    <div class="tech-item">
+      <h3>Integrated Status Tracking</h3>
+      <p>
+        Every request and response is tracked sequentially, providing seekers
+        with live updates and maintaining a streamlined donation process
+        that saves lives through clarity.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ================= CTA SECTION ================= -->
+  <section class="section hidden cta">
+    <h2>BECOME A LIFE SAVER</h2>
+
+    <p>
+      Join Hemolink's rapid response network. Whether you are seeking a donor or ready to give,
+      our precision mapping connects lives in real-time. Join thousands of heroes in your direct
+      vicinity and make an impact today.
+    </p>
+
+    <div class="cta-buttons">
+      <button class="btn-primary" onclick="location.href='register.html'">
+        Register as Donor
+      </button>
+
+      <button class="btn-outline" onclick="location.href='request.html'">
+        Request Blood
+      </button>
+    </div>
+  </section>
+
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgb(6, 6, 6);
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #f2f1f1;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+}
+.logo img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+
+/* BUTTONS */
+.btn-primary {
+  background: #e63946;
+  color: #efeded;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border: 1px solid #100d0e;
+  background-color:bal;
+  color: #0a0708;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 80px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-left h1 {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-left p {
+  margin: 20px 0;
+  max-width: 500px;
+}
+
+.hero-right img {
+  width: 550px;
+  border-radius: 12px;
+}
+
+/* HOW */
+.how h2 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* TECH */
+.tech {
+  display: flex;
+  gap: 60px;
+}
+
+.tech-left img {
+  width: 580px;
+  height: 580px;
+  object-fit: cover;   /* keeps image not stretched */
+  border-radius: 200px; /* square with soft edges */
+}
+
+.tech-right {
+  width: 50%;
+}
+
+.tech-right h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.tech-item {
+  margin-bottom: 30px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  background: #000000;
+  border-radius: 20px;
+  margin: 50px;
+  padding: 80px;
+}
+
+.cta h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: white;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

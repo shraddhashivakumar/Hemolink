@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register as Donor | Hemolink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/forms.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Hemolink</div>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<!-- FORM SECTION -->
+<section class="form-section">
+  <div class="form-container">
+    <h2>Register as a Donor</h2>
+    <p class="form-desc">
+      Join Hemolink’s life-saving network. Your information helps connect you
+      instantly with seekers in your vicinity.
+    </p>
+
+    <form id="donorForm">
+
+      <label for="fullName">Full Name *</label>
+      <input type="text" id="fullName" required>
+
+      <label for="email">Email *</label>
+      <input type="email" id="email" required>
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" required>
+
+      <label for="bloodType">Blood Type *</label>
+      <select id="bloodType" required>
+        <option value="">Select Blood Type</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>O+</option>
+        <option>O-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+      </select>
+
+      <label for="donorAddress">Address *</label>
+      <input type="text" id="donorAddress" required>
+
+      <!-- MAP -->
+      <label>Select Your Location on Map *</label>
+      <div id="donorMap" class="map-box"></div>
+
+      <!-- Hidden Coordinates -->
+      <input type="hidden" id="donorLat">
+      <input type="hidden" id="donorLng">
+
+      <button type="submit" class="btn-primary">Register</button>
+
+      <p class="success-message" id="donorSuccess"></p>
+    </form>
+  </div>
+</section>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/forms.js"></script>
+
+</body>
+</html>

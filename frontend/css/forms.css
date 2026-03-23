@@ -1,0 +1,172 @@
+.form-section {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  background: rgb(240, 233, 233);
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 4000px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.form-container h2 {
+  margin-bottom: 10px;
+}
+
+.form-desc {
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 14px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #e63946;
+}
+
+.toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.success-message {
+  margin-top: 15px;
+  color: green;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 25px;
+  }
+}
+.map-box {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .map-box {
+    height: 250px;
+  }
+}
+.results-container {
+  margin-top: 30px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.donor-card {
+  background: rgb(248, 196, 190);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.donor-card:hover {
+  transform: translateY(-5px);
+}
+
+.highlight {
+  border: 2px solid #e63946;
+  background: #a7f8ac;
+}
+
+.call-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #e63946;
+  color: rgb(255, 252, 252);
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.mini-map {
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.two-column {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.left-panel {
+  flex: 1;
+}
+
+.right-panel {
+  flex: 1;
+  min-height: 500px;
+}
+
+@media (max-width: 900px) {
+  .two-column {
+    flex-direction: column;
+  }
+}
+.donor-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.request-btn {
+  background: #e63946;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.request-btn:hover {
+  background: #c1121f;
+}
+.sms-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #e63946;
+  color: rgb(255, 252, 252);
+  text-decoration: none;
+  border-radius: 6px;
+}

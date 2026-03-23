@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemolink - FAQ</title>
+
+<style>
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f6f6f6;
+    color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: #060606;
+    color: white;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+/* PAGE TITLE */
+.header {
+    text-align: center;
+    padding: 70px 20px 40px;
+}
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #555;
+}
+
+/* FAQ CONTAINER */
+.faq-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* FAQ ITEM */
+.faq {
+    background: white;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* QUESTION */
+.question {
+    padding: 20px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question:hover {
+    background: #fafafa;
+}
+
+/* PLUS ICON */
+.icon {
+    font-size: 22px;
+    color: #e63946;
+    transition: transform 0.3s;
+}
+
+/* ANSWER */
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 25px;
+    color: #444;
+    line-height: 1.6;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* ACTIVE */
+.faq.active .answer {
+    max-height: 200px;
+    padding: 0 25px 20px 25px;
+}
+
+.faq.active .icon {
+    transform: rotate(45deg);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">Hemolink</div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="request.html">Request Blood</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know about donating and requesting blood</p>
+</div>
+
+<!-- FAQ SECTION -->
+<div class="faq-container">
+
+  <div class="faq">
+    <div class="question">
+      Who can donate blood?
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      Any healthy individual aged between 18 and 60 years and weighing more than 50kg can donate blood.
+    </div>
+  </div>
+
+  <div class="faq">
+    <div class="question">
+      How does Hemolink find nearby donors?
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      Hemolink uses location-based matching to identify donors within a 1 km radius and sends instant alerts via SMS and email.
+    </div>
+  </div>
+
+  <div class="faq">
+    <div class="question">
+      Is donating blood safe?
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      Yes. Sterile and disposable equipment is used every time, ensuring no risk of infection.
+    </div>
+  </div>
+
+  <div class="faq">
+    <div class="question">
+      How often can I donate?
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      Whole blood can be donated every 3 months for men and every 4 months for women as per medical guidelines.
+    </div>
+  </div>
+
+  <div class="faq">
+    <div class="question">
+      What happens after I accept a request?
+      <span class="icon">+</span>
+    </div>
+    <div class="answer">
+      The seeker receives your confirmation and the location details so you can coordinate the donation quickly.
+    </div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll(".question").forEach(q => {
+    q.addEventListener("click", () => {
+        const faq = q.parentElement;
+        faq.classList.toggle("active");
+    });
+});
+</script>
+
+</body>
+</html>

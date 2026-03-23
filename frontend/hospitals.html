@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hemolink - Registered Hospitals</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#f6f6f6;
+    color:#111;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+    background:#060606;
+    color:white;
+}
+
+.logo{
+    font-weight:800;
+    font-size:20px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:70px 20px 40px;
+}
+
+.header h1{
+    font-size:46px;
+    margin-bottom:10px;
+}
+
+.header p{
+    color:#555;
+}
+
+/* GRID */
+.hospital-container{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.card{
+    background:white;
+    border-radius:14px;
+    padding:25px;
+    box-shadow:0 5px 14px rgba(0,0,0,0.08);
+    transition:0.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* NAME */
+.card h3{
+    color:#e63946;
+    margin-bottom:8px;
+}
+
+/* INFO */
+.info{
+    margin:8px 0;
+    color:#444;
+    font-size:15px;
+}
+
+/* STATUS */
+.status{
+    margin-top:12px;
+    font-weight:600;
+}
+
+.open{ color:green; }
+.closed{ color:#e63946; }
+
+/* BUTTON */
+.btn{
+    margin-top:15px;
+    background:#e63946;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">Hemolink</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="request.html">Request Blood</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>Registered Hospitals</h1>
+    <p>Verified medical centers connected to the Hemolink emergency network</p>
+</div>
+
+<!-- HOSPITAL LIST -->
+<div class="hospital-container">
+
+    <div class="card">
+        <h3>City Care Hospital</h3>
+        <div class="info">📍 T Nagar, Chennai</div>
+        <div class="info">📞 +91 98765 43210</div>
+        <div class="info">🩸 Blood Bank Available</div>
+        <div class="status open">Open 24 Hours</div>
+        <button class="btn">View Location</button>
+    </div>
+
+    <div class="card">
+        <h3>Global Health Medical Center</h3>
+        <div class="info">📍 Velachery, Chennai</div>
+        <div class="info">📞 +91 91234 56789</div>
+        <div class="info">🩸 Emergency Transfusion</div>
+        <div class="status open">Open 24 Hours</div>
+        <button class="btn">View Location</button>
+    </div>
+
+    <div class="card">
+        <h3>LifeLine Multispeciality Hospital</h3>
+        <div class="info">📍 Anna Nagar, Chennai</div>
+        <div class="info">📞 +91 90000 22222</div>
+        <div class="info">🩸 Blood Storage Unit</div>
+        <div class="status closed">Closes at 9 PM</div>
+        <button class="btn">View Location</button>
+    </div>
+
+    <div class="card">
+        <h3>RedCross Medical Centre</h3>
+        <div class="info">📍 Adyar, Chennai</div>
+        <div class="info">📞 +91 98888 77777</div>
+        <div class="info">🩸 Emergency Donation Camp</div>
+        <div class="status open">Open 24 Hours</div>
+        <button class="btn">View Location</button>
+    </div>
+
+</div>
+
+</body>
+</html>
