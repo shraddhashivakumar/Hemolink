@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Blood | Hemolink</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/forms.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Hemolink</div>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<!-- FORM SECTION -->
+<section class="form-section">
+  <div class="form-container two-column">
+    <!-- LEFT SIDE -->
+  <div class="left-panel">
+
+    <h2>Request Blood</h2>
+    <p class="form-desc">
+      Provide the necessary details and Hemolink will instantly notify
+      compatible donors nearby.
+    </p>
+
+    <form id="requestForm">
+
+      <label for="requestName">Requester Name *</label>
+      <input type="text" id="requestName" required>
+
+      <label for="requestContact">Contact Information *</label>
+      <input type="text" id="requestContact" required>
+
+      <label for="requestBlood">Required Blood Type *</label>
+      <select id="requestBlood" required>
+        <option value="">Select Blood Type</option>
+        <option>A+</option>
+        <option>A-</option>
+        <option>B+</option>
+        <option>B-</option>
+        <option>O+</option>
+        <option>O-</option>
+        <option>AB+</option>
+        <option>AB-</option>
+      </select>
+
+      <label for="requestReason">Health Issue / Reason *</label>
+      <textarea id="requestReason" rows="4" required></textarea>
+
+      <label for="requestAddress">Request Location *</label>
+      <input type="text" id="requestAddress" required>
+
+      <label>Select Location on Map *</label>
+      <div id="requestMap" class="map-box"></div>
+
+      <input type="hidden" id="requestLat">
+      <input type="hidden" id="requestLng">
+
+      <button type="submit" class="btn-primary">Send Request</button>
+
+      <p class="success-message" id="requestSuccess"></p>
+
+    </form>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="right-panel">
+    <div id="matchedResults" class="results-container"></div>
+    <div id="miniMap" class="mini-map"></div>
+  </div>
+
+</div>
+</section>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/forms.js"></script>
+
+</body>
+</html>
